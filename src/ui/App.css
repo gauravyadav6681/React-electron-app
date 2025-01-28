@@ -1,0 +1,244 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.sidebar ul li i {
+  margin-right: 15px;
+}
+.sidebar ul li:hover {
+  background-color: #34495e;
+  color: #1abc9c;
+}
+.sidebar ul li.settings {
+  justify-content: space-between;
+}
+.settings-menu {
+  /* display: none; */
+  padding-left: 20px;
+}
+.settings-menu li {
+  padding: 10px 0;
+}
+.sidebar .settings-menu {
+  margin-left: 24px;
+  margin-top: 16px;
+  display: block;
+}
+.main-content {
+  flex: 1;
+  background-color: #e5e7eb;
+  padding: 16px;
+}
+.dark-mode {
+  background-color: #1a202c;
+  color: #cbd5e0;
+}
+.dark-mode .sidebar {
+  background-color: #2d3748;
+}
+.dark-mode .sidebar ul li {
+  color: white;
+}
+.dark-mode .weather-card {
+  background: linear-gradient(120deg, #ffaaaa, #9181ff);
+}
+.dark-mode .main-content {
+  background-color: #4a5568;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #111;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  width: 45px;
+  height: 22px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 24px;
+  height: 25px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+img {
+  max-width: 100%;
+}
+.weather-card {
+  height: 70%;
+  text-align: center;
+  border-radius: 20px;
+  color: #fff;
+  background: linear-gradient(120deg, #00feba, #5b548a);
+}
+.weather-card .search {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.search {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.search input {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  flex: 1;
+  color: #555;
+  padding: 10px 25px;
+  outline: none;
+  background: #ebfffc;
+  border: none;
+  border-radius: 30px;
+}
+.weather-card .search input {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  flex: 1;
+  color: #555;
+  padding: 10px 25px;
+  outline: none;
+  background: #ebfffc;
+  border: none;
+  border-radius: 30px;
+}
+.weather-card .search button {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin-left: 16px;
+  border: none;
+  outline: 0;
+  background: #ebfffc;
+  border-radius: 50%;
+}
+.search button {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin-left: 16px;
+  border: none;
+  outline: 0;
+  background: #ebfffc;
+  border-radius: 50%;
+}
+.weather-card .search button i {
+  font-size: 20px;
+  color: #333;
+}
+.search button i {
+  font-size: 20px;
+  color: #333;
+}
+.weather h1 {
+  font-size: 80px;
+  font-weight: 500;
+  margin-top: -20px;
+}
+.weather h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: -25px;
+}
+.weather .weather-icon {
+  width: 10%;
+  margin-top: 5%;
+  padding: 10px;
+}
+.details {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.details .humi {
+  filter: brightness(10000%);
+}
+.details img {
+  width: 40px;
+  height: 40px;
+}
+.details .info {
+  margin-left: 10px;
+}
+.details .humidity,
+.wind {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: -5px;
+}
+.col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin-top: -20px;
+}
+.settings-menu {
+  display: none; /* Initially hidden */
+}
+
+.settings-menu.visible {
+  display: block; /* Show the menu when visible */
+}
